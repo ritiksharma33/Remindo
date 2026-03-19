@@ -7,7 +7,8 @@
 ---
 
 ## 📺 See Remindo in Action
-[Drop your Demo GIF or Screen Recording here! Just drag the file into this spot on GitHub]
+![Free Universe Stars Video Gif Animated Zoom Virtual Background](https://github.com/user-attachments/assets/7e818a8e-0423-4566-9150-4661fba44710)
+
 
 ---
 
@@ -60,3 +61,5 @@ By using **Clerk**, Remindo ensures:
 4. **Run:** `npm run dev`
 
 Built with ❤️ to keep the mind clear. Check out my other projects on [GitHub](https://github.com/ritiksharma33).
+<img width="1440" height="820" alt="Screenshot 2026-03-19 at 2 17 43 PM" src="https://github.com/user-attachments/assets/bb8da394-778d-467f-b8ce-0f84eba82be0" />
+<img width="1440" height="900" alt="Screenshot 2026-03-19 at 2 17 51 PM" src="https://github.com/user-attachments/assets/78426f3f-507a-420f-8a8c-27d93b9e8d4f" />
