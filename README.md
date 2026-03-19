@@ -62,4 +62,6 @@ By using **Clerk**, Remindo ensures:
 
 Built with ❤️ to keep the mind clear. Check out my other projects on [GitHub](https://github.com/ritiksharma33).
 <img width="1440" height="820" alt="Screenshot 2026-03-19 at 2 17 43 PM" src="https://github.com/user-attachments/assets/bb8da394-778d-467f-b8ce-0f84eba82be0" />
-<img width="1440" height="900" alt="Screenshot 2026-03-19 at 2 17 51 PM" src="https://github.com/user-attachments/assets/78426f3f-507a-420f-8a8c-27d93b9e8d4f" />
+<img width="1678" height="830" alt="image" src="https://github.com/user-attachments/assets/064b7c0e-e4aa-488e-919c-ebde4a0c62bb" />
+<img width="1630" height="928" alt="image" src="https://github.com/user-attachments/assets/ce298adf-b291-4156-9fc3-5db96d222448" />
+
