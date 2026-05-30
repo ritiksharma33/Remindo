@@ -1,67 +1,315 @@
-# 🧠 Remindo: The Mental External Hard Drive
+# Remindo AI 🧠
 
-"Your brain is for having ideas, not holding them. Remindo does the holding." 
+**Your Second Brain for Learning, Memory, and AI-Powered Productivity**
 
-**Remindo** is a high-performance "Brain Dump" application. It doesn't just store notes; it manages your cognitive load by tracking memory decay, visualizing time, and gamifying your goals.
+Remindo AI helps users capture knowledge, organize memories, review information using spaced repetition, and interact with their personal knowledge base through AI.
+
+Instead of losing valuable notes, screenshots, ideas, and insights across multiple apps, Remindo AI transforms them into a searchable, reviewable, and AI-assisted memory system.
 
 ---
-
 ## 📺 See Remindo in Action
 ![Free Universe Stars Video Gif Animated Zoom Virtual Background](https://github.com/user-attachments/assets/7e818a8e-0423-4566-9150-4661fba44710)
 
+## ✨ Features
+
+### 📝 Smart Memory Capture
+
+* Save notes, ideas, insights, and learning resources
+* Organize information into a centralized knowledge base
+* Tag and categorize memories
+* Full CRUD support (Create, Read, Update, Delete)
+
+### 🎯 Mission-Based Learning
+
+* Create long-term learning missions
+* Set deadlines and milestones
+* Link memories to specific goals
+* Track progress toward outcomes
+
+### 🔄 Spaced Repetition System (SRS)
+
+* Automatically schedule reviews
+* Reinforce learning at optimal intervals
+* Reduce forgetting
+* Build long-term retention
+
+### 🤖 AI Assistant
+
+* Chat with your knowledge base
+* Summarize memories
+* Generate explanations
+* Ask questions about saved information
+* Personalized AI-powered learning assistance
+
+### 💬 AI Chat History
+
+* Save conversations
+* Continue previous discussions
+* Build contextual learning sessions
+
+### ⚙️ User-Controlled AI Settings
+
+* Choose AI provider
+* Configure preferred model
+* Store personal API keys
+* Future support for multiple LLM providers
+
+### 🔐 Authentication
+
+* Secure user authentication with Clerk
+* User-specific memories and missions
+* Protected API routes
 
 ---
 
-## 🌟 Why Remindo? (The Problem)
-Standard note apps are "graveyards" where ideas go to be forgotten. I built Remindo to solve:
-* **The Forgetting Curve:** Most ideas vanish in 24 hours. Remindo tracks this curve to keep your best thoughts alive.
-* **Time Blindness:** We overestimate how much year is left. Remindo shows you the ticking clock.
-* **Cognitive Overload:** Integrated **Clerk Auth** for instant, secure access so you can dump thoughts and get back to work.
+## 🏗️ Tech Stack
+
+### Frontend
+
+* React
+* Tailwind CSS
+* Clerk Authentication
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+
+### AI
+
+* Google Gemini API
+* Multi-provider architecture (planned)
+
+### Authentication
+
+* Clerk
+
+### Documentation
+
+* Swagger UI
 
 ---
 
-## 🛠️ The Tech Stack
-| Category | Tool | Why? |
-| :--- | :--- | :--- |
-| **Framework** | Next.js / React | Lightning-fast routing and SSR. |
-| **Auth** | **Clerk** | Secure, managed sessions and social login. |
-| **Styling** | Tailwind CSS | Rapid UI development with a clean aesthetic. |
-| **Database** | Prisma / MongoDB | Structured storage for unstructured thoughts. |
+## 📂 Project Structure
+
+```text
+backend/
+│
+├── server.js
+│
+├── src/
+│
+├── config/
+│   ├── db.js
+│   └── swagger.js
+│
+├── controllers/
+│   ├── memory.controller.js
+│   ├── mission.controller.js
+│   ├── review.controller.js
+│   ├── ai.controller.js
+│   ├── chat.controller.js
+│   └── settings.controller.js
+│
+├── middleware/
+│   └── auth.js
+│
+├── models/
+│   ├── Memory.js
+│   ├── Mission.js
+│   ├── Review.js
+│   ├── Chat.js
+│   └── AISettings.js
+│
+├── routes/
+│   ├── memory.routes.js
+│   ├── mission.routes.js
+│   ├── review.routes.js
+│   ├── ai.routes.js
+│   ├── chat.routes.js
+│   └── settings.routes.js
+│
+└── services/
+    ├── ai.service.js
+    ├── srs.service.js
+    └── embedding.service.js
+```
 
 ---
 
-## ✨ Key Features (v1.0)
-* 🔐 **Clerk-Powered Security:** Enterprise-grade authentication. Your brain dump is for your eyes only.
-* 📉 **Memory Decay Tracker:** Built-in logic based on the **Ebbinghaus Forgetting Curve** to remind you of entries before they slip away.
-* ⏳ **Life Dashboard:** Real-time visualizers showing % of the day passed and % of the year remaining. 
-* 🎯 **Goal Timelines:** Set goals (e.g., "Summer Internship in 60 Days") and see a high-stakes countdown that keeps you moving.
-* 🔍 **Time-Travel Search:** Search through your "Memories" by specific dates or keywords to see what you were thinking a week, month, or year ago.
+## 🚀 Getting Started
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/remindo-ai.git
+
+cd remindo-ai
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create:
+
+```bash
+.env
+```
+
+Add:
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+```
+
+### 4. Start Server
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+node server.js
+```
 
 ---
 
-## 🛡️ Security & Privacy
-By using **Clerk**, Remindo ensures:
-1. **JWT Validation:** Every request is verified.
-2. **Data Isolation:** Your notes are tied strictly to your unique Clerk UserID.
-3. **MFA Ready:** Option to enable Multi-Factor Auth for your most sensitive data.
+## 📖 API Documentation
+
+Swagger UI:
+
+```text
+http://localhost:5000/api-docs
+```
+
+Available endpoints:
+
+### Memories
+
+```http
+GET    /api/memories
+POST   /api/memories
+GET    /api/memories/:id
+PUT    /api/memories/:id
+DELETE /api/memories/:id
+```
+
+### Missions
+
+```http
+GET    /api/missions
+POST   /api/missions
+PUT    /api/missions/:id
+DELETE /api/missions/:id
+```
+
+### Reviews
+
+```http
+GET    /api/reviews/today
+POST   /api/reviews/:memoryId
+```
+
+### AI
+
+```http
+POST /api/ai/chat
+POST /api/ai/summarize
+```
+
+### Settings
+
+```http
+GET /api/settings/ai
+PUT /api/settings/ai
+```
 
 ---
 
-## 🚀 Roadmap: What's coming in v2.0
-- [ ] **AI Summarization:** Automatically turn a messy dump into a clean bulleted list.
-- [ ] **Dark Mode:** For those 3 AM "Eureka!" moments.
-- [ ] **Voice-to-Text:** Dump your brain while on the move.
+## 🌍 Vision
+
+Most productivity tools help users store information.
+
+Remindo AI aims to help users:
+
+* Remember what matters
+* Learn faster
+* Retain knowledge longer
+* Build a personal knowledge system
+* Collaborate with AI as an extension of memory
+
+The long-term goal is to create a true AI-powered second brain that continuously learns alongside the user.
 
 ---
 
-## 💻 Local Setup
-1. **Clone:** `git clone https://github.com/yourusername/remindo.git`
-2. **Install:** `npm install`
-3. **Env Setup:** Create a `.env` file and add your `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`.
-4. **Run:** `npm run dev`
+## 🛣️ Roadmap
 
-Built with ❤️ to keep the mind clear. Check out my other projects on [GitHub](https://github.com/ritiksharma33).
-<img width="1440" height="820" alt="Screenshot 2026-03-19 at 2 17 43 PM" src="https://github.com/user-attachments/assets/bb8da394-778d-467f-b8ce-0f84eba82be0" />
-<img width="1678" height="830" alt="image" src="https://github.com/user-attachments/assets/064b7c0e-e4aa-488e-919c-ebde4a0c62bb" />
-<img width="1630" height="928" alt="image" src="https://github.com/user-attachments/assets/ce298adf-b291-4156-9fc3-5db96d222448" />
+### Version 1
 
+* Memory management
+* Missions
+* Reviews
+* Gemini integration
+* Authentication
+
+### Version 2
+
+* AI memory retrieval
+* Semantic search
+* Memory linking
+* Knowledge graphs
+
+### Version 3
+
+* Voice capture
+* Screenshot understanding
+* Automatic memory extraction
+* Agentic workflows
+
+### Version 4
+
+* Multi-agent learning assistant
+* Personalized learning coach
+* Long-term memory engine
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👨‍💻 Author
+
+**Ritik Sharma**
+
+B.Tech Computer Science Engineering
+
+Building technology that helps people learn, remember, and think better with AI.
