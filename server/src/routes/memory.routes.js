@@ -11,6 +11,18 @@ const {
   deleteMemory,
   searchMemories
 } = require("../controllers/memory.controller");
+/**
+ * @swagger
+ * /api/memories:
+ *   get:
+ *     summary: Get all memories
+ *     tags:
+ *       - Memories
+ *     responses:
+ *       200:
+ *         description: List of memories
+ */
+
 
 // Get all memories
 router.get("/", getMemories);
@@ -20,7 +32,30 @@ router.get("/search", searchMemories);
 
 // Get single memory
 router.get("/:id", getMemoryById);
-
+/**
+ * @swagger
+ * /api/memories:
+ *   post:
+ *     summary: Create memory
+ *     tags:
+ *       - Memories
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               content:
+ *                 type: string
+ *               type:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Memory created
+ */
 // Create memory
 router.post("/", createMemory);
 
